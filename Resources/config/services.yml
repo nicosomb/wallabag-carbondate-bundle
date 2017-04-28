@@ -1,0 +1,19 @@
+services:
+    nicosomb.subscriber.carbon_date:
+        class: Nicosomb\WallabagCarbondateBundle\Event\Subscriber\CarbonDateSubscriber
+        arguments:
+            - "@doctrine.orm.default_entity_manager"
+            - "@nicosomb_wallabag_carbondate.enabled"
+            - "@nicosomb.entry.carbon_date"
+            - "@logger"
+        tags:
+            - { name: kernel.event_subscriber }
+
+    nicosomb.entry.carbon_date.client:
+        class: GuzzleHttp\Client
+
+    nicosomb.entry.carbon_date:
+        class: Nicosomb\WallabagCarbondateBundle\Helper\CarbonDate
+        arguments:
+            - "@nicosomb.entry.carbon_date.client"
+            - "@logger"

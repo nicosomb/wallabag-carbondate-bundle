@@ -1,0 +1,32 @@
+{
+  "name": "nicosomb/wallabag-carbondate-bundle",
+  "description": "Try to guess creation date by using carbon date, see http://carbondate.cs.odu.edu.",
+  "type": "symfony-bundle",
+  "keywords": [
+    "wallabag",
+    "wallabag-plugin",
+    "symfony3",
+    "bundle",
+    "camo",
+    "proxy"
+  ],
+  "homepage": "https://github.com/nicosomb/wallabag-carbondate-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nicolas Lœuillet",
+      "email": "nicolas@loeuillet.org",
+      "homepage": "https://nicolas.loeuillet.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nicosomb\\WallabagCarbondateBundle\\": ""
+    }
+},
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
