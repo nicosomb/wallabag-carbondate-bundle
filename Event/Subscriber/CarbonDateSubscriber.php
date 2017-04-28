@@ -45,8 +45,8 @@ class CarbonDateSubscriber implements EventSubscriberInterface
 
         $entry = $event->getEntry();
 
-        if (null !== $entry->getPublishedAt()) {
-            $this->logger->debug('CarbonDateSubscriber: publishedBy is not null.');
+        if (null !== $entry->getPublishedAt() || 200 !== $entry->getHttpStatus()) {
+            $this->logger->debug('CarbonDateSubscriber: publishedBy is not null or http status != 200.');
 
             return;
         }
