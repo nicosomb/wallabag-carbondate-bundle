@@ -3,7 +3,7 @@ services:
         class: Nicosomb\WallabagCarbondateBundle\Event\Subscriber\CarbonDateSubscriber
         arguments:
             - "@doctrine.orm.default_entity_manager"
-            - "@nicosomb_wallabag_carbondate.enabled"
+            - "%nicosomb_wallabag_carbondate.enabled%"
             - "@nicosomb.entry.carbon_date"
             - "@logger"
         tags:
@@ -15,5 +15,6 @@ services:
     nicosomb.entry.carbon_date:
         class: Nicosomb\WallabagCarbondateBundle\Helper\CarbonDate
         arguments:
+            - "%nicosomb_wallabag_carbondate.server%"
             - "@nicosomb.entry.carbon_date.client"
             - "@logger"

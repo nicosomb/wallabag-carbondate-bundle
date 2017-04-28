@@ -1,13 +1,13 @@
 <?php
 
-namespace Nicosomb\WallabagCamoBundle\DependencyInjection;
+namespace Nicosomb\WallabagCarbondateBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class NicosombWallabagCamoExtension extends Extension
+class NicosombWallabagCarbondateExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -19,12 +19,12 @@ class NicosombWallabagCamoExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-        $container->setParameter('nicosomb_wallabag_carbondate.url', $config['url']);
+        $container->setParameter('nicosomb_wallabag_carbondate.server', $config['server']);
         $container->setParameter('nicosomb_wallabag_carbondate.enabled', $config['enabled']);
     }
 
     public function getAlias()
     {
-        return 'nicosomb_wallabag_camo';
+        return 'nicosomb_wallabag_carbondate';
     }
 }

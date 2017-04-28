@@ -44,6 +44,6 @@ class AppKernel extends Kernel
 # app/config/config.yml
 
 nicosomb_wallabag_carbondate:
-    url: http://carbondate.cs.odu.edu
+    server: 'http://carbondate.cs.odu.edu'
     enabled: true
 ```

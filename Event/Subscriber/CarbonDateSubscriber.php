@@ -4,7 +4,7 @@ namespace Nicosomb\WallabagCarbondateBundle\Event\Subscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Psr\Log\LoggerInterface;
-use Wallabag\CoreBundle\Helper\CarbonDate;
+use Nicosomb\WallabagCarbondateBundle\Helper\CarbonDate;
 use Wallabag\CoreBundle\Event\EntrySavedEvent;
 use Doctrine\ORM\EntityManager;
 

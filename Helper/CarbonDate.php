@@ -7,11 +7,13 @@ use GuzzleHttp\Client;
 
 class CarbonDate
 {
+    private $server;
     private $client;
     private $logger;
 
-    public function __construct(Client $client, LoggerInterface $logger)
+    public function __construct($server, Client $client, LoggerInterface $logger)
     {
+        $this->server = $server;
         $this->client = $client;
         $this->logger = $logger;
     }
@@ -25,7 +27,7 @@ class CarbonDate
      */
     public function fetchDate($url)
     {
-        $response = $this->client->get('http://cd.cs.odu.edu/cd?url='.$url);
+        $response = $this->client->get($this->server.'/cd?url='.$url);
         $body = $response->getBody();
         $content = json_decode($body->getContents());
 

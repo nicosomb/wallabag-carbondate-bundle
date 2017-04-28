@@ -7,8 +7,7 @@
     "wallabag-plugin",
     "symfony3",
     "bundle",
-    "camo",
-    "proxy"
+    "carbondate"
   ],
   "homepage": "https://github.com/nicosomb/wallabag-carbondate-bundle",
   "license": "MIT",

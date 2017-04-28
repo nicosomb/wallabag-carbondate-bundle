@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('url')
+                ->scalarNode('server')
                     ->defaultValue('http://carbondate.cs.odu.edu')
                 ->end()
                 ->scalarNode('enabled')
